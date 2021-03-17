@@ -1,0 +1,11 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    <div class="card" style="width: 20%;">
+        <img src="{Cardimage}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{neos:contentElement.editable(property: 'Cardtitle')}</h5>
+            <p class="card-text">{neos:contentElement.editable(property: 'Carddescription')}</p>
+            <a href="{Cardbuttonlink}" class="btn btn-primary">{Cardtextbutton}</a>
+        </div>
+    </div>
+</div>

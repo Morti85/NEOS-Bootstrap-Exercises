@@ -1,0 +1,10 @@
+##
+# "Button" Element
+#
+prototype(Geopard.Mortibootstrap:Content.Button) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Geopard.Mortibootstrap/Private/Templates/NodeTypes/Button.html'
+    Buttontext = ${q(node).property('Buttontext')}
+    Buttonfarbe = ${q(node).property('Buttonfarbe')}
+    Buttonlink = ${q(node).property('Buttonlink')}
+    Buttonlink.@process.convertUris = Neos.Neos:ConvertUris
+}

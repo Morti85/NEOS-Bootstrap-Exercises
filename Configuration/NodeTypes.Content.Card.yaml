@@ -1,0 +1,62 @@
+'Geopard.Mortibootstrap:Content.Card':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Karte
+    icon: 'icon-id-card'
+    position: 100
+    inspector:
+      groups:
+        settings:
+          label: Irgendwas
+          position: 1
+  properties:
+    Cardtitle:
+      type: string
+      defaultValue: 'Hier könnte Ihr Titel stehen.'
+      ui:
+        inlineEditable: true
+    Carddescription:
+      type: string
+      defaultValue: 'Hier könnte Ihre Beschreibung stehen.'
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            formatting:
+              strong: true
+              em: true
+              u: true
+              sub: true
+              sup: true
+              del: true
+    Cardtextbutton:
+      type: string
+      defaultValue: 'Buttontext'
+      ui:
+        label: 'Buttontext'
+        reloadIfChanged: true
+        inspector:
+          position: 2
+          group: 'settings'
+    Cardimage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Bild'
+        reloadIfChanged: true
+        inspector:
+          position: 1
+          group: 'settings'
+          editorOptions:
+            features:
+              crop: true
+              resize: true
+    Cardbuttonlink:
+      type: string
+      defaultValue: 'Link'
+      ui:
+        label: 'Bildlink:'
+        inspector:
+          position: 3
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

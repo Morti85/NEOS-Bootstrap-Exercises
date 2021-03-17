@@ -1,0 +1,58 @@
+'Geopard.Mortibootstrap:Content.Button':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Button
+    icon: 'icon-biohazard'
+    position: 69
+    inspector:
+      groups:
+        settings:
+          label: Button
+          position: 2
+  properties:
+    Buttontext:
+      type: string
+      defaultValue: 'Buttontext'
+      ui:
+        label: 'Buttontext'
+        reloadIfChanged: true
+        inspector:
+          position: 1
+          group: 'settings'
+    Buttonfarbe:
+      type: string
+      defaultValue: 'primary'
+      ui:
+        label: 'Buttonfarbe'
+        reloadIfChanged: true
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              primary:
+                label: 'Blau'
+              secondary:
+                label: 'Grau'
+              success:
+                label: 'Grün'
+              danger:
+                label: 'Rot'
+              warning:
+                label: 'Gelb'
+              info:
+                label: 'Hellblau'
+              light:
+                label: 'Eierschalenweiß'
+              dark:
+                label: 'schwarz'
+    Buttonlink:
+      type: string
+      defaultValue: 'Hier Link eingeben:'
+      ui:
+        label: 'Bildlink:'
+        inspector:
+          position: 2
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

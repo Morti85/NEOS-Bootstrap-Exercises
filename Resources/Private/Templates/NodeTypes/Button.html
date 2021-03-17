@@ -1,0 +1,8 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    <div class="button">
+        <a href="{Buttonlink}">
+            <button type="button" class="btn btn-{Buttonfarbe}">{neos:contentElement.editable(property: 'Buttontext')}</button>
+        </a>
+    </div>
+</div>

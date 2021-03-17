@@ -1,0 +1,14 @@
+##
+# "Card" element
+#
+prototype(Geopard.Mortibootstrap:Content.Card) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Geopard.Mortibootstrap/Private/Templates/NodeTypes/Card.html'
+    Cardtitle = ${q(node).property('Cardtitle')}
+    Carddescription = ${q(node).property('Carddescription')}
+    Cardtextbutton = ${q(node).property('Cardtextbutton')}
+    Cardimage = Neos.Neos:ImageUri {
+        asset = ${q(node).property('Cardimage')}
+    }
+    Cardbuttonlink = ${q(node).property('Cardbuttonlink')}
+    Cardbuttonlink.@process.convertUris = Neos.Neos:ConvertUris
+}

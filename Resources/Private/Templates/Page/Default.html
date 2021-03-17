@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<html>
+<head>
+	<f:section name="stylesheets">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	</f:section>
+	<f:section name="headScripts">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	</f:section>
+<body>
+<f:section name="body">
+	<nav class="menu">
+		{parts.menu -> f:format.raw()}
+	</nav>
+	<div class="content">
+		{content.main -> f:format.raw()}
+
+	<f:comment>
+		If you enabled the "sidebar" content area in your NodeType configuration and Fusion, you can uncomment this
+		section to actually render in in your output. Remove the "f:comment" tag and this text, and adjust the markup as you
+		like.
+
+		{content.sidebar -> f:format.raw()}
+	</f:comment>
+
+	</div>
+</f:section>
+<f:section name="bodyScripts">
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by Fusion -->
+</f:section>
+</body>
+</html>

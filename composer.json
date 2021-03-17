@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "geopard/mortibootstrap",
+    "autoload": {
+        "psr-4": {
+            "Geopard\\Mortibootstrap\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Geopard.Mortibootstrap"
+        }
+    }
+}
